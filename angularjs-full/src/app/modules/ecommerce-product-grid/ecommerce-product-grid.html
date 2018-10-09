@@ -1,0 +1,79 @@
+<div class="product-grid" ng-controller="PageCtrl">
+  <ol class="breadcrumb" ng-if="!isModalOpened">
+    <li>YOU ARE HERE</li>
+    <li class="active">E-commerce</li>
+  </ol>
+  <h1 class="page-title" ng-if="!isModalOpened">E-commerce -
+    <span class="fw-semi-bold">Product Grid</span>
+  </h1>
+  <div class="grid-filters hidden-xs">
+    <div class="grid-filter" ng-repeat="filter in filters">
+      <label>{{filter.label}}</label>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{filter.options[0]}}
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li ng-repeat="option in filter.options">
+            <a href="#">{{option}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-modal" ng-if="isModalOpened">
+    <div class="modal-title">
+      <div class="btn modal-button">
+        <img src="assets/images/back.svg" alt="back" ng-if="isPageOpened && !isSpecificPageOpened" ng-click="closePage()">
+        <img src="assets/images/close.svg" alt="close" ng-if="!isPageOpened || isSpecificPageOpened" ng-click="closeModal()">
+      </div>
+      {{title}}
+    </div>
+    <ul class="modal-pages" ng-if="!isPageOpened">
+      <li class="modal-page" ng-repeat="filter in filters" ng-if="filter.id !== 6" ng-click="openPage(filter.label)">{{filter.label}}</li>
+    </ul>
+    <ul class="modal-elements" ng-if="isPageOpened">
+      <li class="modal-element" ng-repeat="option in optionsToDisplay" ng-click="toggleFilter(title, option)" ng-class="isActive(title, option) && 'active'">
+        <span>
+          <img src="assets/images/check.svg" alt="check" />
+        </span>
+        {{option}}
+      </li>
+    </ul>
+  </div>
+  <div ng-if="!isModalOpened" class="mobile-buttons hidden-sm hidden-md hidden-lg">
+    <button ng-click="openSpecificPage('Sort')">
+      Sort
+      <i class="fa fa-2x fa-angle-down" />
+    </button>
+    <button ng-click="openModal('Filter')">
+      Filter
+      <i class="fa fa-2x fa-angle-down" />
+    </button>
+  </div>
+  <div class="row grid-elements" ng-controller="ProductsCtrl" ng-if="!isModalOpened">
+    <div ng-repeat="product in products" class="col-md-3 col-sm-4 col-xs-6">
+      <div class="grid-element product-card">
+        <div class="card-photo" style="background-image: url({{product.image}})">
+          <div class="photo-label" ng-show="product.label" ng-class="product.label === 'Sale' ? 'red' : 'green'">{{product.label}}</div>
+          <div class="star" ng-class="product.starred && 'star-fill'" ng-click="product.change()">
+            <i class="fa" ng-class="product.starred ? 'fa-star' : 'fa-star-o'"></i>
+          </div>
+        </div>
+        <div class="data-wrapper">
+          <h5 class="card-title">{{product.title}}</h5>
+          <div class="card-description">{{product.subtitle}}</div>
+        </div>
+        <div class="price" ng-show="!product.isSale">
+          ${{product.price}}
+        </div>
+        <div class="price price-sale" ng-show="product.isSale">
+          <span class="old">${{product.price.old}}</span>
+          {{product.price.percents}}% off
+          <span class="new text-danger"> ${{product.price.new}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

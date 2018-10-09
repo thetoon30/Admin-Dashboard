@@ -1,0 +1,156 @@
+<ol class="breadcrumb">
+  <li>YOU ARE HERE</li>
+  <li class="active">E-commerce</li>
+</ol>
+<h1 class="page-title">E-commerce -
+  <span class="fw-semi-bold">Product Detail</span>
+</h1>
+<div class="product-page">
+  <section class="product-main">
+    <div class="col-md-8 col-sm-12">
+      <div class="main-photo" style="background-image: url(assets/images/products/product1.jpg)"></div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="main-info">
+        <div class="data-wrapper">
+          <div class="rating rating-lg">
+            4.8
+            <i class="fa fa-star"></i>
+          </div>
+          <div class="info-wrapper">
+            <div class="info-title">Trainers</div>
+            <div class="info-description text-muted">Trainers In White</div>
+          </div>
+        </div>
+        <div class="price price-lg">$76</div>
+        <a href="#" class="info-size">Size Guide</a>
+        <div class="info-selects" ng-controller="SelectsController">
+          <div class="btn-group" data-dropdown>
+            <button class="btn btn-default dropdown-toggle" data-dropdown-toggle data-original-title="" title="">
+              <span ng-if="!size">&nbsp; Select size &nbsp;</span>
+              <span ng-if="size">&nbsp; Size: {{size}} &nbsp;</span>
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li ng-click="changeSize(2)">
+                <a href="#">2</a>
+              </li>
+              <li ng-click="changeSize(3)">
+                <a href="#">3</a>
+              </li>
+              <li ng-click="changeSize(4)">
+                <a href="#">4</a>
+              </li>
+              <li ng-click="changeSize(5)">
+                <a href="#">5</a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-group" data-dropdown>
+            <button class="btn btn-default dropdown-toggle" data-dropdown-toggle data-original-title="" title="">
+              {{quantility}}
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li ng-click="changeQuantility(1)">
+                <a href="#">1</a>
+              </li>
+              <li ng-click="changeQuantility(2)">
+                <a href="#">2</a>
+              </li>
+              <li ng-click="changeQuantility(3)">
+                <a href="#">3</a>
+              </li>
+              <li ng-click="changeQuantility(4)">
+                <a href="#">4</a>
+              </li>
+              <li ng-click="changeQuantility(5)">
+                <a href="#">5</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="info-bag" ng-controller="StarController">
+          <button class="btn btn-inverse add">
+            add to bag
+            <img src="assets/images/bag.svg" alt="bag">
+          </button>
+          <button class="btn star" ng-click="changeStarredBanner()">
+            <i class="fa fa-2x" ng-class="starred ? 'fa-star' : 'fa-star-o'"></i>
+          </button>
+        </div>
+        <div class="info-payments">
+          <div class="payment" style="background-image: url(assets/images/payments/visa.svg)"></div>
+          <div class="payment" style="background-image: url(assets/images/payments/mastercard.svg)"></div>
+          <div class="payment" style="background-image: url(assets/images/payments/aexpress.svg)"></div>
+          <div class="payment" style="background-image: url(assets/images/payments/paypal.svg)"></div>
+        </div>
+        <span class="text-muted">
+          FREE Delivery & Returns
+        </span>
+      </div>
+      <div class="info-payments">
+        <div class="payment" style="background-image: url(assets/images/payments/visa.svg)"></div>
+        <div class="payment" style="background-image: url(assets/images/payments/mastercard.svg)"></div>
+        <div class="payment" style="background-image: url(assets/images/payments/aexpress.svg)"></div>
+        <div class="payment" style="background-image: url(assets/images/payments/paypal.svg)"></div>
+      </div>
+      <span class="text-muted">
+        FREE Delivery & Returns
+      </span>
+    </div>
+  </section>
+  <h3 class="page-title hidden-xs text-center">Product Description</h3>
+  <section class="product-description widget" ng-controller="DescriptionController">
+    <div class="description-block" ng-repeat="desc in description" ng-class="desc.extraClass">
+      <h5 class="description-title">{{desc.title}}</h5>
+      <div ng-bind-html="desc.body"></div>
+    </div>
+  </section>
+  <section class="product-description description-mobile" ng-controller="DescriptionController">
+    <div class="panel panel-default description-block" ng-repeat="desc in description">
+      <div class="panel-heading collapsed" ng-class="desc.id === 0 && 'panel-first'">
+        <h5 class="panel-title">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{desc.id}}">
+            {{desc.title}}
+            <i class="fa fa-angle-up fa-2x pull-right"></i>
+          </a>
+        </h5>
+      </div>
+      <div id="collapse{{desc.id}}" class="panel-collapse collapse">
+        <div class="panel-body" ng-bind-html="desc.body"></div>
+      </div>
+    </div>
+  </section>
+  <h3 class="page-title">You may also like</h3>
+  <div class="page-carousel">
+    <div class="slick" ng-controller="ProductsCtrl">
+      <div class="product-card" ng-repeat="item in products" post-repeat-directive>
+        <div class="card-photo" style="background-image: url({{item.image}}) ">
+          <div class="photo-label" ng-show="item.label" ng-class="item.label === 'Sale' ? 'red' : 'green'">{{item.label}}</div>
+          <div class="star " ng-class="item.starred && 'star-fill'" ng-click="item.change()">
+            <i class="fa " ng-class="item.starred ? 'fa-star' : 'fa-star-o' "></i>
+          </div>
+        </div>
+        <div class="data-wrapper">
+          <h5 class="card-title">{{item.title}}</h5>
+          <div class="card-description">{{item.subtitle}}</div>
+        </div>
+        <div class="price-wrapper">
+          <div class="price" ng-show="!item.isSale">
+            ${{item.price}}
+          </div>
+          <div class="price price-sale" ng-show="item.isSale">
+            <span class="old">${{item.price.old}}</span>
+            {{item.price.percents}}% off
+            <span class="new text-danger"> ${{item.price.new}}</span>
+          </div>
+          <div class="rating rating-reverse">
+            {{item.rating}}
+            <i class="fa fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
