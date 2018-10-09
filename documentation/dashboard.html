@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sing Documentation</title>
+    <link href="css/documentation.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+</head>
+<body class="background-two">
+<nav id="sidebar" class="sidebar">
+    <ul id="side-nav" class="side-nav">
+        <li><a href="index.html"><span class="name">Overview</span></a></li>
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-html5-collapse"> <span class="name">Version: HTML5</span></a>
+            <ul id="version-html5-collapse" class="accordion-body collapse">
+                <li><a href="./html5/quickstart.html">Quick start</a></li>
+                <li><a href="./html5/structure.html">Structure</a></li>
+                <li><a href="./html5/components.html">Components</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-react-collapse"> <span class="name">Version: React</span></a>
+            <ul id="version-react-collapse" class="accordion-body collapse">
+                <li><a href="./react/quickstart.html">Quick start</a></li>
+                <li><a href="./react/structure.html">Structure</a></li>
+                <li><a href="./react/components.html">Components</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-angular-collapse"> <span class="name">Version: Angular</span></a>
+            <ul id="version-angular-collapse" class="accordion-body collapse">
+                <li><a href="./angular/quickstart.html">Quick start</a></li>
+                <li><a href="./angular/structure.html">Structure</a></li>
+                <li><a href="./angular/components.html">Components</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-angularjs-collapse"> <span class="name">Version: AngularJS</span></a>
+            <ul id="version-angularjs-collapse" class="accordion-body collapse">
+                <li><a href="./angularjs/quickstart.html">Quick start</a></li>
+                <li><a href="./angularjs/structure.html">Structure</a></li>
+                <li><a href="./angularjs/components.html">Components</a></li>
+            </ul>
+        </li>
+        <!-- <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-rails-collapse"> <span class="name">Version: Rails</span></a>
+            <ul id="version-rails-collapse" class="accordion-body collapse">
+                <li><a href="rails_qs.html">Quick start</a></li>
+                <li><a href="rails_st.html">Structure</a></li>
+                <li><a href="rails_cp.html">Components</a></li>
+            </ul>
+        </li> -->
+        <li class="accordion-group active">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#pages-collapse"> <span class="name">Pages</span></a>
+            <ul id="pages-collapse" class="accordion-body collapse in">
+                <li class="active"><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="inbox.html">Email</a></li>
+                <li><a href="extra.html">Extra</a></li>
+            </ul>
+        </li>
+        <li><a href="support.html"><span class="name">Support</span></a></li>
+        <li><a href="https://flatlogic.com/github"><span class="name">Github</span></a></li>
+        <li><a href="changelog.html"><span class="name">Change log</span></a></li>
+    </ul>
+</nav>
+<div class="wrap">
+    <div class="row-fluid">
+        <div class="span10">
+            <header class="page-header">
+                <h1>Sing Documentation 4.2.1</h1>
+            </header>
+        </div>
+    </div>
+    <div class="content container-fluid">
+        <div class="row-fluid">
+            <div class="span10">
+                <section class="widget">
+                  <h2>Navigation</h2>
+                  <hr>
+                  <ol style="margin-top: 0">
+                      <li><a href="#dashboard">Dashboard</a></li>
+                      <li><a href="#widgets">Widgets</a></li>
+                  </ol>
+
+                  <h2 id="dashboard">Dashboard</h2>
+                  <hr>
+
+                  <h2 id="widgets">Basic Widget</h2>
+                    <hr>
+                    <p><strong>Sing</strong> widget has really intuitive structure and may contain three parts: header, body and footer. But any of
+                        them can be omitted. So the basic widget structure looks like:</p>
+                    <pre>&lt;section class="widget"&gt;
+    &lt;header&gt;
+        &lt;h3&gt;Header&lt;/h3&gt;
+    &lt;/header&gt;
+    &lt;div class="widget-body"&gt;
+        Body
+    &lt;/div&gt;
+    &lt;footer&gt;
+        Footer
+    &lt;/footer&gt;
+&lt;/section&gt;</pre>
+                    <p>Widget will take as much place as inner content needs, but you can control its size with these classes:
+                        <code>.widget-sm</code>, <code>.widget-md</code>.</p>
+
+                    <h2>Widget Colors</h2>
+                    <hr>
+                    <p>Any widget (generally speaking - any element) may be styled with <code>.bg-primary</code>,
+                        <code>.bg-info</code> and other <code>.bg-{color}</code> classes. The whole list is:</p>
+                    <ul>
+                        <li><code>.bg-primary</code></li>
+                        <li><code>.bg-success</code></li>
+                        <li><code>.bg-info</code></li>
+                        <li><code>.bg-warning</code></li>
+                        <li><code>.bg-danger</code></li>
+                        <li><code>.bg-primary-light</code> - light version of color.</li>
+                        <li><code>.bg-success-light</code> - light version of color.</li>
+                        <li><code>.bg-info-light</code> - light version of color. </li>
+                        <li><code>.bg-warning-light</code> - light version of color.</li>
+                        <li><code>.bg-danger-light</code> - light version of color.</li>
+                        <li><code>.bg-body</code> - body-like color.</li>
+                        <li><code>.bg-body-light</code> - lighter body color.</li>
+                        <li><code>.bg-gray</code> - <code>$gray</code> color.</li>
+                        <li><code>.bg-gray-transparent</code> - transparent $gray version <code>rgba($gray, .6)</code>.</li>
+                        <li><code>.bg-gray-dark</code> - $gray-dark variable.</li>
+                        <li><code>.bg-black</code> - black.</li>
+                        <li><code>.bg-gray-light</code> - $gray-light variable.</li>
+                        <li><code>.bg-gray-lighter</code> - $gray-lighter variable</li>
+                        <li><code>.bg-transparent</code> - transparent <code>rgba(0,0,0,0)</code>.</li>
+                        <li><code>.bg-white</code> - white.</li>
+                    </ul>
+
+                    <h2>Widget Controls</h2>
+                    <hr>
+                    <p>See <a href="grid.html">Grid</a>.</p>
+
+                    <h2>Widgets</h2>
+                    <hr>
+
+                    <h3>Statistic Boxes</h3>
+                    <p>Boxes use <a href="http://www.drewgreenwell.com/projects/metrojs">Metro JS</a> for widget & numbers
+                    sliding.</p>                   
+
+                    <h3>Sales and Visits Charts</h3>
+                    <p>Built with <a href="http://www.flotcharts.org/">Flot JS</a>.</p>
+
+                    <h3>Weather Widget</h3>
+                    <p>Uses js canvas-drawing library for showing weather icons - <a href="http://darkskyapp.github.io/skycons/">Skycons</a>.</p>
+
+                    <h3>Nasdaq Widget</h3>
+                    <p>Built with <a href="http://omnipotent.net/jquery.sparkline/#s-about">jQuery Sparkline</a>. This is the most easiest
+                    lib to draw charts. You will find it in lots of place in <strong>Sing</strong>.</p>
+
+                    <h3>Yearly Distributions Map</h3>
+                    <p>Inspired by <a href="http://neveldo.fr/mapael/usecases/world/">Mapael's world population example</a>.
+                    Map initialization code is in <code>initYearsMap</code> function in widgets.js file.</p>
+
+                    <h3>Recent Chats</h3>
+                    <p>Is basically just markup with <a href="http://rocha.la/jQuery-slimScroll">SlimScroll</a> attached. SlimScroll
+                    is a defult scrolling solution in <strong>Sing</strong>. You will find it in lots of places.</p>
+
+                    <h3>Quick View Widget</h3>
+                    <p>Cool dark gray background is easily achievable with <code>.bg-gray-dark</code> class. Realtime chart
+                    is built with <a href="https://github.com/shutterstock/rickshaw">Rickshaw</a>.</p>
+
+                    <h3>Social Widgets</h3>
+                    <p>Same as statistic boxes use <a href="http://www.drewgreenwell.com/projects/metrojs">Metro JS</a> to
+                    slide content. Green shares widget is built with <a href="https://github.com/shutterstock/rickshaw">Rickshaw</a>.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jquery and friends -->
+<script src="js/jquery.1.9.0.min.js"> </script>
+
+<script src="js/bootstrap-transition.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+
+</body>
+</html>

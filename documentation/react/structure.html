@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sing Documentation</title>
+    <link href="../css/documentation.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+</head>
+<body class="background-two">
+    <nav id="sidebar" class="sidebar">
+        <ul id="side-nav" class="side-nav">
+            <li><a href="../index.html"><span class="name">Overview</span></a></li>
+            <li class="accordion-group">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-html5-collapse"> <span class="name">Version: HTML5</span></a>
+                <ul id="version-html5-collapse" class="accordion-body collapse">
+                    <li><a href="../html5/quickstart.html">Quick start</a></li>
+                    <li><a href="../html5/structure.html">Structure</a></li>
+                    <li><a href="../html5/components.html">Components</a></li>
+                </ul>
+            </li>
+            <li class="accordion-group active">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-react-collapse"> <span class="name">Version: React</span></a>
+                <ul id="version-react-collapse" class="accordion-body collapse in">
+                    <li><a href="./quickstart.html">Quick start</a></li>
+                    <li class="active"><a href="./structure.html">Structure</a></li>
+                    <li><a href="./components.html">Components</a></li>
+                </ul>
+            </li>
+            <li class="accordion-group">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-angular-collapse"> <span class="name">Version: Angular</span></a>
+                <ul id="version-angular-collapse" class="accordion-body collapse">
+                    <li><a href="../angular/quickstart.html">Quick start</a></li>
+                    <li><a href="../angular/structure.html">Structure</a></li>
+                    <li><a href="../angular/components.html">Components</a></li>
+                </ul>
+            </li>
+            <li class="accordion-group">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-angularjs-collapse"> <span class="name">Version: AngularJS</span></a>
+                <ul id="version-angularjs-collapse" class="accordion-body collapse">
+                    <li><a href="../angularjs/quickstart.html">Quick start</a></li>
+                    <li><a href="../angularjs/structure.html">Structure</a></li>
+                    <li><a href="../angularjs/components.html">Components</a></li>
+                </ul>
+            </li>
+            <!-- <li class="accordion-group">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-rails-collapse"> <span class="name">Version: Rails</span></a>
+                <ul id="version-rails-collapse" class="accordion-body collapse">
+                    <li><a href="rails_qs.html">Quick start</a></li>
+                    <li><a href="rails_st.html">Structure</a></li>
+                    <li><a href="rails_cp.html">Components</a></li>
+                </ul>
+            </li> -->
+            <li class="accordion-group">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#pages-collapse"> <span class="name">Pages</span></a>
+                <ul id="pages-collapse" class="accordion-body collapse">
+                    <li><a href="../dashboard.html">Dashboard</a></li>
+                    <li><a href="../inbox.html">Email</a></li>
+                    <li><a href="../extra.html">Extra</a></li>
+                </ul>
+            </li>
+            <li><a href="../support.html"><span class="name">Support</span></a></li>
+            <li><a href="https://flatlogic.com/github"><span class="name">Github</span></a></li>
+            <li><a href="../changelog.html"><span class="name">Change log</span></a></li>
+        </ul>
+    </nav>
+<div class="wrap">
+    <div class="row-fluid">
+        <div class="span10">
+            <header class="page-header">
+                <h1>Sing Documentation 4.2.1</h1>
+            </header>
+        </div>
+    </div>
+    <div class="content container-fluid">
+        <div class="row-fluid">
+            <div class="span10">
+                <section class="widget">
+                  <h2>React: Structure</h2>
+                  <hr>
+                  <p>Sing App package goes with the following folders:</p>
+                  <ul>
+                      <li><strong>build</strong> - the folder for compiled output;</li>
+                      <li><strong>docs</strong> - documentation files for the project;</li>
+                      <li><strong>node_modules</strong> - 3rd-party libraries and utilities;</li>
+                      <li><strong>public</strong> - static files which are copied into the /build/public folder;</li>
+                      <p></p>
+                      <li><strong>src</strong> - the source code of the application;</li>
+                      <li><strong>src/components</strong> - react components;</li>
+                      <li><strong>src/data</strong> - GraphQL server schema and data models;</li>
+                      <li><strong>src/routes</strong> - page/screen components along with the routing information;</li>
+                      <li><strong>src/client.js</strong> - client-side startup script;</li>
+                      <li><strong>src/server.js</strong> - server-side startup script;</li>
+                      <li><strong>src/config.js</strong> - global application settings;</li>
+                      <li><strong>test</strong> - unit and end-to-end tests;</li>
+                      <p></p>
+                      <li><strong>tools</strong> - build automation scripts and utilities;</li>
+                      <li><strong>tools/lib</strong> - library for utility snippets;</li>
+                      <li><strong>tools/*.js</strong> - automation scripts files;</li>
+                      <li><strong>tools/postcss.config.js</strong> - configuration for transforming styles with PostCSS plugin;</li>
+                      <li><strong>tools/webpack.config.js</strong> - configurations for client-side and server-side bundles;</li>
+                      <p></p>
+                      <li><strong>Dockerfile</strong> - commands for building a Docker image for production;</li>
+                      <li><strong>package.json</strong> - the list of 3rd party libraries and utilities;</li>
+                      <li><strong>yarn.lock</strong> - fixed versions of all the dependencies;</li>
+                  </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jquery and friends -->
+<script src="../js/jquery.1.9.0.min.js"> </script>
+
+<script src="../js/bootstrap-transition.js"></script>
+<script src="../js/bootstrap-collapse.js"></script>
+
+</body>
+</html>

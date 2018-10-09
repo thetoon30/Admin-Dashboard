@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sing Documentation</title>
+    <link href="../css/documentation.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+</head>
+<body class="background-two">
+<nav id="sidebar" class="sidebar">
+    <ul id="side-nav" class="side-nav">
+        <li><a href="../index.html"><span class="name">Overview</span></a></li>
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-html5-collapse"> <span class="name">Version: HTML5</span></a>
+            <ul id="version-html5-collapse" class="accordion-body collapse">
+                <li><a href="../html5/quickstart.html">Quick start</a></li>
+                <li><a href="../html5/structure.html">Structure</a></li>
+                <li><a href="../html5/components.html">Components</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-react-collapse"> <span class="name">Version: React</span></a>
+            <ul id="version-react-collapse" class="accordion-body collapse">
+                <li><a href="../react/quickstart.html">Quick start</a></li>
+                <li><a href="../react/structure.html">Structure</a></li>
+                <li><a href="../react/components.html">Components</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group active">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-angular-collapse"> <span class="name">Version: Angular</span></a>
+            <ul id="version-angular-collapse" class="accordion-body collapse in">
+                <li><a href="./quickstart.html">Quick start</a></li>
+                <li><a href="./structure.html">Structure</a></li>
+                <li class="active"><a href="./components.html">Components</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-angularjs-collapse"> <span class="name">Version: AngularJS</span></a>
+            <ul id="version-angularjs-collapse" class="accordion-body collapse">
+                <li><a href="../angularjs/quickstart.html">Quick start</a></li>
+                <li><a href="../angularjs/structure.html">Structure</a></li>
+                <li><a href="../angularjs/components.html">Components</a></li>
+            </ul>
+        </li>
+        <!-- <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-rails-collapse"> <span class="name">Version: Rails</span></a>
+            <ul id="version-rails-collapse" class="accordion-body collapse">
+                <li><a href="rails_qs.html">Quick start</a></li>
+                <li><a href="rails_st.html">Structure</a></li>
+                <li><a href="rails_cp.html">Components</a></li>
+            </ul>
+        </li> -->
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#pages-collapse"> <span class="name">Pages</span></a>
+            <ul id="pages-collapse" class="accordion-body collapse">
+                <li><a href="../dashboard.html">Dashboard</a></li>
+                <li><a href="../inbox.html">Email</a></li>
+                <li><a href="../extra.html">Extra</a></li>
+            </ul>
+        </li>
+        <li><a href="../support.html"><span class="name">Support</span></a></li>
+        <li><a href="https://flatlogic.com/github"><span class="name">Github</span></a></li>
+        <li><a href="../changelog.html"><span class="name">Change log</span></a></li>
+    </ul>
+</nav>
+<div class="wrap">
+    <div class="row-fluid">
+        <div class="span10">
+            <header class="page-header">
+                <h1>Sing Documentation 4.2.1</h1>
+            </header>
+        </div>
+    </div>
+    <div class="content container-fluid">
+        <div class="row-fluid">
+            <div class="span10">
+                <section class="widget">
+                  <h2>Angular: Components</h2>
+                  <hr>
+                  <ol>
+                    <li><a href="#charts">Charts</a></li>
+                    <li>
+                      <a href="#f_elements">Forms</a>
+                      <ul>
+                        <li><a href="#f_elements">Elements</a></li>
+                        <li><a href="#f_validation">Validation</a></li>
+                        <li><a href="#f_wizard">Wizard</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#ui_components">UI</a>
+                      <ul>
+                        <li><a href="#ui_components">Components</a></li>
+                        <li><a href="#ui_notifications">Notificaions</a></li>
+                        <li><a href="#ui_icons">Icons</a></li>
+                        <li><a href="#ui_buttons">Buttons</a></li>
+                        <li><a href="#ui_tabs">Tabs</a></li>
+                        <li><a href="#ui_accordion">Accordion</a></li>
+                        <li><a href="#ui_groups">List Groups</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#grid">Grid</a></li>
+                    <li>
+                      <a href="#maps_google">Maps</a>
+                      <ul>
+                        <li><a href="#maps_google">Google</a></li>
+                        <li><a href="#maps_vector">Vector</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#tables_static">Tables</a>
+                      <ul>
+                        <li><a href="#tables_static">Static</a></li>
+                        <li><a href="#tables_dynamic">Dynamic</a></li>
+                      </ul>
+                    </li>
+                  </ol>
+                  <div class="alert alert-info">
+                      <p>Angular 5 version based on the angular-cli. So if you want to add any lib in the bundle, just put PATH to this lib in angular-cli.json. JQuery should always be the first. Example:</p>
+                      <pre><code>scripts: [
+    "../node_modules/jquery/dist/jquery.js", 
+    ..., 
+    "../node_modules/jquery-flot/jquery.flot.js", 
+    ...
+]</code></pre>
+                  </div>
+                  <div class="alert alert-info">
+                      <p>For the most components directives are used. <a href="https://angular.io/api/core/Directive">Learn more about directives</a>
+                        Available directives/components:</p>
+                        <ul>
+                            <li><strong><a href="#cp_dropzone">Dropzone</a></strong> - an open source library that provides drag’n’drop file uploads with image previews.</li>
+                            <li><strong><a href="#cp_flot">Flot</a></strong> - a pure JavaScript plotting library for jQuery.</li>
+                            <li><strong><a href="#cp_morris">Morris</a></strong> - the library that powers the graphs.</li>
+                            <li><strong><a href="#cp_nvd3">nvd3</a></strong> - this project is an attempt to build re-usable charts and chart components for d3.js</li>
+                            <li><strong><a href="#cp_rickshaw">Rickshaw</a></strong> - a toolkit for creating interactive real-time graphs.</li>
+                            <li><strong><a href="#cp_sparkline">Sparkline</a></strong> - this plugin generates sparklines (small inline charts) directly in the browser.</li>
+                            <li><strong><a href="#f_wizard">Wizard</a></strong> - this Twitter Bootstrap plugin builds a wizard using a formatted tabbable structure</li>
+                        </ul>
+                  </div>
+                  <h2 id="charts">Charts</h2>
+                    <hr>
+                    <h3 id="cp_flot">Flot Charts</h3>
+                    <p>Built with <a href="http://www.flotcharts.org/">Flot JS</a>. Add this in angular-cli.json to add lib in a bundle. Required libs:</p>
+                    <pre><code>PATHS: "../node_modules/jquery-flot/jquery.flot.js",
+       "../node_modules/jquery-flot/jquery.flot.time.js",
+       "../node_modules/jquery.flot.animator/jquery.flot.animator.min.js"
+</code></pre>
+                    <pre><code>&lt;div id="flot-main" flot-chart-animator
+    [data]="[{label: 'Traffic', data: data3, lines: {fill: .3, lineWidth: 0}, color: '#ccc'},
+             {label: 'Traffic', data: data1, animator: {steps: 60, duration: 1000, start:0}},
+             {lines: {lineWidth:2}, shadowSize:0, color: '#F7553F'}]"
+&gt;
+&lt;/div&gt;</code></pre>
+
+                    <h3>Flot Bars</h3>
+                    <p>Same as Flot Charts built with <a href="http://www.flotcharts.org/">Flot</a>. A bit different dependencies:</p>
+                    <pre><code>PATHS: "../node_modules/jquery-flot/jquery.flot.js",
+       "../node_modules/jquery-flot/jquery.flot.time.js",
+       "../node_modules/jquery.flot.animator/jquery.flot.animator.min.js"</code></pre>
+
+                    <h3 id="cp_sparkline">Interactive Sparklines</h3>
+                    <p>Built with <a href="http://omnipotent.net/jquery.sparkline/#s-about">jqeruy.sparkline</a>.</p>
+                    <pre><code>PATH: "../node_modules/jquery-sparkline/jquery.sparkline.min.js"</code></pre>
+                    <pre><code>&lt;div class="sparkline" jq-sparkline 
+    [data]="[9,12,14,15,10,14,20]" 
+    [options] = "{type: 'bar', barColor: '#f0b518', height: '30px', barWidth: 6, barSpacing: 2}"&gt;
+&lt;/div&gt;</code></pre>
+
+                    <h3>Sparkline Pie Charts</h3>
+                    <p>Same as interactive sparklines based on <a href="http://omnipotent.net/jquery.sparkline/#s-about">jqeruy.sparkline</a>.</p>
+                    <pre><code>PATH: "../node_modules/jquery-sparkline/jquery.sparkline.min.js"</code></pre>
+
+                    <h3 id="cp_rickshaw">Rickshaw</h3>
+                    <p>Realtime chart is based on <a href="http://code.shutterstock.com/rickshaw/examples/extensions.html">Rickshaw
+                    realtime example</a>.</p>
+
+                    <h3 id="cp_nvd3">D3 charts</h3>
+                    <p>These charts are based on amazing <a href="http://d3js.org/">D3.js</a> library. Here is what D3
+                        says about itself:</p>
+                    <blockquote>
+                        D3.js is a JavaScript library for manipulating documents based on data.
+                        D3 helps you bring data to life using HTML, SVG and CSS. D3’s emphasis on web standards
+                        gives you the full capabilities of modern browsers without tying yourself to a proprietary
+                        framework, combining powerful visualization components and a data-driven approach to DOM manipulation.
+                    </blockquote>
+                    <p>So it means that graphs are drawn with standard SVG and styled with CSS. You can customize all you like with techniques you already know.</p>
+                    <p>There are two libraries used in <strong>Sing App</strong> which work on top of D3.js:</p>
+                    <ul>
+                        <li><a href="http://nvd3.org/">nvd3</a> - which is focused on developing re-usable charts and chart components for d3.js without taking away the power that d3.js gives to developer, and</li>
+                        <li><a href="http://code.shutterstock.com/rickshaw/">Rickshaw</a> - a JavaScript toolkit for creating interactive time series graphs based on d3.js underneath. Rickshaw is used for displaying
+                            realtime data in Sing.</li>
+                    </ul>
+                    <pre><code>PATHS: "../node_modules/d3/d3.min.js",
+       "../node_modules/nvd3/build/nv.d3.min.js"</code></pre>
+
+                    <h3 id="cp_morris">Morris Charts</h3>
+                    <p>Built with <a href="http://www.oesmith.co.uk/morris.js/">Morris JS</a>.</p>
+                    <pre><code>PATHS: "../node_modules/webpack-raphael/raphael-min.js",
+       "../node_modules/morris.js/morris.js"</code></pre>
+
+                    <h3>Easy Pie Charts</h3>
+                    <p>Built with <a href="https://github.com/rendro/easy-pie-chart">Easy Pie Chart</a>.</p>
+                    <pre><code>PATH: "../node_modules/easy-pie-chart/dist/jquery.easypiechart.js"</code></pre>
+                    <h2 id="f_elements">Form Elements</h2>
+                    <hr>
+                    <div class="alert alert-info">
+                        <a href="https://valor-software.com/ngx-bootstrap/#/">Ngx-bootstrap</a> is used for all bootstrap components in Sing App.
+                    </div>
+                    <p> Use the <code>.form-inline</code> class to display a series of labels, form controls, and buttons on a single horizontal row.</p>
+                    <p>Code example:</p>
+                    <pre><code>&lt;form class="form-inline"&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="formGroupExampleInput">Example label&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label for="formGroupExampleInput2"&gt;Another label&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input"&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                    <h3>Inputs</h3>
+                    <hr/>
+                    <p>Bootstrap styles input by default, so there is no need to add any classes to inputs. Just use them. Don't forget to include input type.</p>
+                    <p>Bootstrap has a great <a href="https://v4-alpha.getbootstrap.com/components/forms/">documentation about forms</a>.</p>
+
+                    <h3>Input Sizing</h3>
+                    <hr/>
+                    <p>Any input can be sized by adding <code>.col-*-*</code> class. For vertical sizing
+                        <code>.form-control-lg</code> and <code>.form-control-sm</code> are available.</p>
+
+
+                    <h3>Prepended and appended inputs</h3>
+                    <hr/>
+                    <p>Again Bootstrap helps. It has <a href="https://v4-alpha.getbootstrap.com/components/forms/">everything we need to prepend and append inputs</a>.</p>
+
+
+                    <h3>Textareas</h3>
+                    <hr/>
+                    <p>Auto-growing textarea uses <a href="https://stevepapa.com/ng-autosize/">ng-autosize</a> directive
+                        to increase area size dynamically. Imports:</p>
+                    <pre><code>import { Autosize } from 'ng-autosize';</code></pre>
+                    <p>Wysiwyg editor is based on <a href="https://www.tinymce.com/">
+                        Tinymce</a>. Imports:</p>
+                    <pre><code>import { EditorModule } from '@tinymce/tinymce-angular';</code></pre>
+                    <p>Markdown editor. Code example:</p>
+                    <pre><code>&lt;textarea class="form-control" id="markdown-editor" data-provide="markdown" rows="6"&gt;
+    ### Hello there
+&lt;/textarea&gt;</code></pre>
+                    <h3>Selects</h3>
+                    <hr/>
+                    <p>Two different type of selects avaiables in <strong>Sing</strong> template:</p>
+                    <ul>
+                        <li><a href="https://github.com/NejcZdovc/ng2-select2">Select2</a> - is a really powerful tool used to convert default selects to interactive search-enabled widgets.</li>
+                        <li><a href="https://github.com/silviomoreto/bootstrap-select">Bootstrap Select</a> - is Bootstrap based custom select, designed to behave like regular Bootstrap selects.
+                            This one can be colored as any button.</li>
+                    </ul>
+                    <p>Imports:</p>
+        <pre>import { Select2Module } from 'ng2-select2';
+PATH: "../node_modules/bootstrap-select/dist/js/bootstrap-select.js"</pre>
+
+                    <h3>Checkboxes and Radio</h3>
+                    <hr/>
+                    <p>To style default checkboxes and radio buttons <a href="https://github.com/okendoken/awesome-bootstrap-checkbox">
+                        Awesome Bootstrap Checkbox</a> library is used. This lib was written specially for Sing, so
+                        in case you find some bugs or want some features - let us know.</p>
+                        <p>Usage: </p>
+                        <pre><code>&lt;div class="form-check abc-checkbox"&gt;
+    &lt;input class="form-check-input" id="checkbox1" type="checkbox"&gt;
+    &lt;label class="form-check-label" for="checkbox1"&gt;
+        Default
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+                    <h3>Button-like checkboxes</h3>
+                    <hr/>
+                    <p>Bootstrap has a great api to handle button states -
+                        <a href="https://valor-software.com/ngx-bootstrap/#/buttons">bootstrap buttons</a>, so using it to
+                        imitate checkbox or radio buttons.</p>
+
+                    <h3>iOS-like switches</h3>
+                    <hr/>
+                    <p>Usage example:</p>
+                    <pre><code>&lt;div class="display-inline-block checkbox-ios"&gt;
+    &lt;label class="form-check-label" for="checkbox-ios1" class="switch"&gt;
+        &lt;input class="form-check-input" type="checkbox" class="ios" checked id="checkbox-ios1"&gt;&lt;i&gt;&lt;/i&gt;
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+                    <h3>Pickers</h3>
+                    <hr/>
+                    <p>Any field may have either <a href="https://nkalinov.github.io/ng2-datetime/">ng2-datetime</a>
+                        or <a href="http://www.eyecon.ro/bootstrap-colorpicker/">Colorpicker</a> attached. Required files:</p>
+                    <pre>import { NKDatetimeModule } from 'ng2-datetime/ng2-datetime';</pre>
+                    <pre><code>PATHS: "../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",
+       "../node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js",
+       "../node_modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"</code></pre>
+
+                    <h3>Masked Inputs</h3>
+                    <hr/>
+                    <p>To make any input accept only formatted values there is a great package to use -
+                        <a href="https://text-mask.github.io/text-mask/">angular2-text-mask</a>. Imports:</p>
+                    <pre><code>import { TextMaskModule } from 'angular2-text-mask';</code></pre>
+
+                    <h3>Sliders</h3>
+                    <hr>
+                    <p>Sing sliders are styled version of <a href="https://github.com/seiyria/bootstrap-slider">Bootstrap
+                        Slider plugin</a>.</p>
+                    <pre><code>PATH: "../node_modules/bootstrap-slider/dist/bootstrap-slider.js"</code></pre>
+
+                    <h3>Simple file uploads</h3>
+                    <hr>
+                    <p>Code example:</p>
+                    <pre><code>&lt;div class="fileinput fileinput-new input-group" data-provides="fileinput"&gt;
+    &lt;div class="form-control" data-trigger="fileinput"&gt;
+        &lt;i class="glyphicon glyphicon-file fileinput-exists"&gt;&lt;/i&gt;
+        &lt;span class="fileinput-filename"&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;span class="input-group-addon btn btn-default btn-file"&gt;
+        &lt;span class="fileinput-new"&gt;Select file&lt;/span&gt;
+        &lt;span class="fileinput-exists"&gt;Change&lt;/span&gt;
+        &lt;input name="..." type="file"&gt;
+    &lt;/span&gt;
+    &lt;a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput"&gt;Remove&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+                    <h3 id="cp_dropzone">Dropzone</h3>
+                    <hr>
+                    <p>Dead simple file upload plugin with image preview <a href="http://www.dropzonejs.com/">Dropzone</a>.</p>
+                    <pre><code>PATH: "../node_modules/dropzone/dist/dropzone.js"</code></pre>
+                    <h2 id="f_validation">Validation</h2>
+                    <hr>
+                    <p><strong>Sing App</strong> uses really great validation plugin -
+                        <a href="http://parsleyjs.org/">parsley.js</a>. It's better to
+                        let it say itself:</p>
+                    <blockquote>Javascript forms validation.
+                        Powerful, UX aware & Dead simple.
+                        Never write a single javascript line anymore to validate your forms FrontEnd. Parsley will do that for you – and do it right –, thanks to its powerful DOM-API !
+                    </blockquote>
+                    <p>To activate it you need to add <code>data-validate="parsley"</code> to your form to make it work. That's it.</p>
+                    <p>If you want to add step-by-step validation with <a href="#f_wizard">wizard</a> please check
+                        <a href="http://parsleyjs.org/doc/examples/multisteps.html">this guide</a>.</p>
+                    <pre><code>PATH: "../node_modules/parsleyjs/dist/parsley.js"</code></pre>
+                    <h2 id="f_wizard">Wizard</h2>
+                    <hr>
+                    <p><a href="http://vadimg.com/twitter-bootstrap-wizard-example/">Twitter Bootstrap Wizard Plugin</a> is used to build wizard-enabled widget.</p>
+                    <blockquote>This twitter bootstrap plugin builds a wizard out of a formatter tabbable structure. It allows to build a wizard functionality using buttons to go through the different wizard steps and using events allows to hook into each step individually.
+                    </blockquote>
+                    <p>To activate it you need to call <code>bootstrap-wizard</code> directive on your markup to create wizard.</p>
+                    <p>If you want to add step-by-step wizard <a href="#f_validation">validation</a> please check
+                        <a href="http://parsleyjs.org/doc/examples/multisteps.html">this guide</a>.</p>
+                    <pre>PATH: "../node_modules/twitter-bootstrap-wizard/jquery.bootstrap.wizard.js"</pre>
+                    <p>Example Markup:</p>
+                    <pre>&lt;div bootstrap-wizard data-height="444" class="form-wizard"&gt;
+    &lt;ul class="flex-md-row flex-column mb-sm nav nav-pills nav-fill"&gt;
+        &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link" href="#tab1" data-toggle="tab">First&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link" href="#tab2" data-toggle="tab">Second&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="bg-gray-lighter progress progress-xs"&gt;
+        &lt;div id="bar" class="progress-bar progress-xs progress-bar-gray-light" style="width: 50%;"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-content"&gt;
+        &lt;div class="tab-pane bg-gray-lighter" id="tab1"&gt;
+        &lt;form action='' method="POST"
+            data-parsley-priority-enabled="false"
+            novalidate="novalidate"&gt;
+            &lt;fieldset&gt;
+                form fields
+            &lt;/fieldset&gt;
+        &lt;/form&gt;
+        &lt;/div&gt;
+        &lt;div class="tab-pane bg-gray-lighter" id="tab2"&gt;
+            other inputs goes here
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                    <h2>Application Wizard</h2>
+                    <hr>
+                    <p><a href="https://github.com/amoffat/bootstrap-application-wizard">Bootstrap Application Wizard</a>
+                    is a ready to use wizard component with simple install process. You don't even need to have any special
+                    markup to instantiate it.</p>
+                    <pre><code>PATH: "../node_modules/bootstrap-application-wizard/src/bootstrap-wizard.js"</code></pre>
+                    <h2 id="ui_components">Components</h2>
+                    <hr>
+                    <p>
+                        This page contain Sing-y styled versions of Bootstrap
+                        <a href="https://valor-software.com/ngx-bootstrap/#/alerts">Alerts</a>,
+                        <a href="https://v4-alpha.getbootstrap.com/components/badge/">Labels</a>,
+                        <a href="https://valor-software.com/ngx-bootstrap/#/tooltip">Tooltips</a>,
+                        <a href="https://valor-software.com/ngx-bootstrap/#/popover">Popovers</a>,
+                        <a href="https://valor-software.com/ngx-bootstrap/#/modals">Modals</a>
+                        and <a href="https://valor-software.com/ngx-bootstrap/#/progressbar">Progress Bars</a>.
+                        All styles are in bootstrap-override.scss.
+                    </p>
+                    <p>For progress bars there is a small <strong>Sing</strong> extension which allows you to change progress bars sizes:
+                    <code>.progress-sm</code>, <code>.progress-xs</code>.</p>
+                    <h2 id="ui_notifications">Notifications</h2>
+                    <hr>
+                    <p>Sing App uses <strong>HubSpot's Messenger</strong> library. It's a client-side growl-like notifications with actions and auto-retry.</p>
+                    <p>Read more at <a href="http://github.hubspot.com/messenger/">Messenger website</a>.</p>
+                    <h2 id="ui_icons">Font Awesome Icons</h2>
+                    <hr/>
+                    <p>Font Awesome is iconic font originally designed for Bootstrap (Font Awesome works great with all
+                        frameworks). It contains 439 icons in pictographic font form.</p>
+                    <p>Read more at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome website</a>.</p>
+                    <h2>Glyphicons Icons</h2>
+                    <hr/>
+                    <p>200  icons in pictographic font form provided by <a href="http://glyphicons.com">Glyphicons</a>.</p>
+                    <h2 id="ui_buttons">Buttons</h2>
+                    <p>To create button you can style any html element with <code>.btn</code> class. <strong>Sing App</strong>
+                        replaces default bootstrap colors with theme specific and adds two more: <code>.btn-gray</code> and
+                        <code>.btn-inverse</code>.</p>
+                    <p>You can read more at <a href="https://valor-software.com/ngx-bootstrap/#/buttons">ngx-bootstrap Buttons page</a>.</p>
+                    <h2 id="ui_tabs">Tabs</h2>
+                    <hr>
+                    <p>Tabs component may be placed both inside of <code>.widget</code> element or directly into main
+                        <code>.content</code>.</p>
+                    <p>Originally Bootstrap has an option to put tabs on left and right. In Bootstrap 3 this feature
+                        was removed. We here think it was a pretty usable component, so <strong>Sing App</strong> keeps
+                    it:</p>
+                    <pre><code>&lt;div&gt;
+    &lt;tabset&gt;
+        &lt;tab heading="Basic title" id="tab1"&gt;Basic content&lt;/tab&gt;
+        &lt;tab heading="Basic Title 1"&gt;Basic content 1&lt;/tab&gt;
+        &lt;tab heading="Basic Title 2&gt;Basic content 2&lt;/tab&gt;
+    &lt;/tabset&gt;
+&lt;/div&gt;</code></pre>
+                    <p>For more info check <a href="https://valor-software.com/ngx-bootstrap/#/tabs">ngx-bootstrap Tabs</a>.</p>
+
+                    <h2 id="ui_accordion">Accordion</h2>
+                    <hr>
+                    <p>Same as Tabs Accordion may be placed both as a widget inside <code>.content</code> or inside of
+                    <code>.widget</code>. <strong>Sing's</strong> accordion is a styled version of
+                    <a href="https://valor-software.com/ngx-bootstrap/#/collapse">ngx-bootstrap Collapse component</a>.</p>
+                    <h2>Grouped Lists</h2>
+                    <hr>
+                    <p><strong>Sing App</strong> grouped lists is a styled version of
+                        jQuery UI <a href="http://jqueryui.com/sortable/">Sortable component</a>.</p>
+    
+                    <h2 id="ui_groups">List Groups</h2>
+                    <hr>
+                    <p>This nestable draggable lists are built with jQuery based lib -
+                    <a href="https://github.com/dbushell/Nestable">Nestable</a>.</p>
+                    <h2 id="grid">Grid System</h2>
+                    <p><strong>Sing App</strong> inherits 12-column grid system from
+                        <a href="http://getbootstrap.com/css/#grid">Bootstrap's great one</a>.</p>
+                    <h2>Widget Controls</h2>
+                    <p>For one of our previous works we have developed a custom jquery plugin called <strong>Widgster</strong> which provides an easy way to handle basic
+                        widget functions like collapsing, closing, ajax-refreshing & fullsreening.</p>
+                    <p>Plugin is open-sourced. Check out <a href="https://github.com/okendoken/widgster">Widgster repository</a>.</p>
+                    <p>To apply all these features to your default widget you have to add appropriate links (or buttons) to it:</p>
+                    <pre>&lt;section class="widget" widget&gt;
+&lt;header&gt;
+    &lt;h6&gt;
+        Alert &lt;span class="fw-semi-bold"&gt;Messages&lt;/span&gt;
+    &lt;/h6&gt;
+    &lt;div class="widget-controls"&gt;
+        &lt;a href="#"&gt;&lt;i class="glyphicon glyphicon-cog"v&lt;/i&gt;&lt;/a&gt;
+        &lt;a href="#"&gt;&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a href="#" data-widgster="close"&gt;&lt;i class="glyphicon glyphicon-remove"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+&lt;div class="widget-body clearfix"&gt;
+    &lt;h3&gt;Small &lt;span class="fw-semi-bold"&gt;Elements&lt;/span&gt;&lt;/h3&gt;
+    &lt;p class="mb-lg"&gt;Some content&lt;/p&gt;
+&lt;/div&gt;
+&lt;/section&gt;</pre>
+                    <p>In the example above links are put into a <code>.widget-controls</code> but you can put them anywhere inside of widget.</p>
+                    <p>Then widgster needs to be initialized via <code>widget</code> directtive and code:</p>
+                    <pre><code>$('.widget').widgster();</code></pre>
+                    <p>As you could guess <code>data-widgster</code> attribute defines widget action to be performed when link is clicked.</p>
+                    <h3>Options</h3>
+                    <ul style="list-style: disc; padding-left: 40px; margin-bottom: 10px">
+                        <li><strong>collapsed</strong> - if true collapses widget after page load;</li>
+                        <li><strong>fullscreened</strong> - if true fullscreens widget after page load;</li>
+                        <li><strong>bodySelector</strong> - widget body selector. Used for loading and collapsing. Default is <code>.body</code>;</li>
+                        <li><strong>load</strong> - an url to fetch widget body from. Default is <code>undefined</code>;</li>
+                        <li><strong>showLoader</strong> - whether to show a loader when ajax refresh performed. Default is <code>true</code>;</li>
+                        <li><strong>autoload</strong> - whether to automatically perform ajax refresh after page load. May be set to an integer value. If set, for example, to 2000 will refresh the widget every 2 seconds. Default is <code>false</code>;</li>
+                        <li><strong>closePrompt(callback)</strong> - a function to be called when closing. Closing is
+                            only performed when <code>callback</code> is called.</li>
+                    </ul>
+                    <p>Widgster accepts an object with options:</p>
+                    <pre><code>$('.widget').widgster({
+    collapsed: true
+});</code></pre>
+
+                    <h3>Actions</h3>
+                    <ul style="list-style: disc; padding-left: 40px; margin-bottom: 10px">
+                        <li><strong>close</strong> - closes the widget;</li>
+                        <li><strong>collapse</strong> - collapses (minimizes) the widget. An element holding this data
+                            attribute will be hidden when widget gets expanded;</li>
+                        <li><strong>expand</strong> - expands the widget. An element holding this data
+                            attribute will be hidden when widget gets collapsed;</li>
+                        <li><strong>fullscreen</strong> - fullscreens the widget. An element holding this data
+                            attribute will be hidden when widget gets restored;</li>
+                        <li><strong>restore</strong> - restores the widget back to its position. An element holding this data
+                            attribute will be hidden when widget gets fullscreened;</li>
+                        <li><strong>load</strong> - reloads widget content from the url provided with <code>data-widget-load</code> attribute.</li>
+                    </ul>
+                    <p>All actions may be called via js:</p>
+                    <pre><code>$('.widget').widgster('close');</code></pre>
+
+                    <h3>Events</h3>
+                    <p>Each action fires both before and after event. Events have the same names as actions. Before event may be canceled.</p>
+                    <p>For example, to make refresh button spin:</p>
+                    <pre>$('.widget').on("load.widgster", function(){
+    $(this).find('[data-widgster="load"] > i').addClass('fa-spin')
+}).on("loaded.widgster", function(){
+    $(this).find('[data-widgster="load"] > i').removeClass('fa-spin')
+});</pre>
+                    <h2 id="maps_google">Google maps</h2>
+                    <hr/>
+                    <p>To embed Google Maps into <strong>Sing App</strong> great package is used -
+                        <a href="https://angular-maps.com/">AGM</a>.</p>
+                    <h2 id="maps_vector">Vector maps</h2>
+                    <hr/>
+                    <p>Sometimes you need to use just simplified version of map. <a href="https://github.com/bjornd/jvectormap">Jvectormap</a> does
+                        a great job in such cases.</p>
+                    <pre><code>PATHS: "../node_modules/jvectormap/jquery-jvectormap.min.js",
+       "../node_modules/jvectormap-world/jquery-jvectormap-world-mill-en.js",</code></pre>
+                    <h2 id="tables_static">Static Tables</h2>
+                    <hr/>
+                    <p><strong>Sing App</strong> tables are based on
+                        <a href="https://v4-alpha.getbootstrap.com/content/tables/">Bootstrap tables</a> with additional
+                        styling.</p>
+                    <p>Sing introduces two new table classes <code>.table-sm</code> and <code>.table-lg</code>
+                        for decreased and increased table paddings accordingly.</p>
+                    <p>Also, don't forget about <code>.table-responsive</code> class which adds horizontal scrollbar
+                    to tables for small screens.</p>
+
+                    <h3>Overflow Table</h3>
+                    <p>
+                        Add any non-bordered .table within a widget for a seamless design.
+                        Awesome look for no cost.
+                        Just wrap the table with simple css class <code>.widget-table-overflow</code> inside
+                        of widget:
+                    </p>
+                    <pre><code>&lt;table class="table table-sm"&gt;
+&lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th&gt;#&lt;/th&gt;
+        &lt;th&gt;First Name&lt;/th&gt;
+        &lt;th&gt;Username&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;th scope="row"&gt;1&lt;/th&gt;
+        &lt;td>Mark&lt;td&gt;
+        &lt;td>@mdo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope="row"&gt;2&lt;/th&gt;
+        &lt;td&gt;Jacob&lt;/td&gt;
+        &lt;td&gt;@fat&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope="row"&gt;3&lt;/th&gt;
+        &lt;td&gt;Larry&lt;/td&gt;
+        &lt;td&gt;@twitter&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/tbody&gt;</code></pre>
+                    <h2 id="tables_dynamic">Dynamic Tables</h2>
+                    <hr/>
+                    <p>Dynamic tables built with <a href="https://github.com/mariuszfoltak/angular2-datatable">angular2-datatables</a> and <a href="http://valor-software.github.io/ng2-table/">ng2-table</a></p>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jquery and friends -->
+<script src="../js/jquery.1.9.0.min.js"> </script>
+
+<script src="../js/bootstrap-transition.js"></script>
+<script src="../js/bootstrap-collapse.js"></script>
+
+</body>
+</html>

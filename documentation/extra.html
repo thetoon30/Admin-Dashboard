@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sing Documentation</title>
+    <link href="css/documentation.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+</head>
+<body class="background-two">
+<nav id="sidebar" class="sidebar">
+    <ul id="side-nav" class="side-nav">
+        <li><a href="index.html"><span class="name">Overview</span></a></li>
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-html5-collapse"> <span class="name">Version: HTML5</span></a>
+            <ul id="version-html5-collapse" class="accordion-body collapse">
+                <li><a href="./html5/quickstart.html">Quick start</a></li>
+                <li><a href="./html5/structure.html">Structure</a></li>
+                <li><a href="./html5/components.html">Components</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-react-collapse"> <span class="name">Version: React</span></a>
+            <ul id="version-react-collapse" class="accordion-body collapse">
+                <li><a href="./react/quickstart.html">Quick start</a></li>
+                <li><a href="./react/structure.html">Structure</a></li>
+                <li><a href="./react/components.html">Components</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-angular-collapse"> <span class="name">Version: Angular</span></a>
+            <ul id="version-angular-collapse" class="accordion-body collapse">
+                <li><a href="./angular/quickstart.html">Quick start</a></li>
+                <li><a href="./angular/structure.html">Structure</a></li>
+                <li><a href="./angular/components.html">Components</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-angularjs-collapse"> <span class="name">Version: AngularJS</span></a>
+            <ul id="version-angularjs-collapse" class="accordion-body collapse">
+                <li><a href="./angularjs/quickstart.html">Quick start</a></li>
+                <li><a href="./angularjs/structure.html">Structure</a></li>
+                <li><a href="./angularjs/components.html">Components</a></li>
+            </ul>
+        </li>
+        <!-- <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-rails-collapse"> <span class="name">Version: Rails</span></a>
+            <ul id="version-rails-collapse" class="accordion-body collapse">
+                <li><a href="rails_qs.html">Quick start</a></li>
+                <li><a href="rails_st.html">Structure</a></li>
+                <li><a href="rails_cp.html">Components</a></li>
+            </ul>
+        </li> -->
+        <li class="accordion-group active">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#pages-collapse"> <span class="name">Pages</span></a>
+            <ul id="pages-collapse" class="accordion-body collapse in">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="inbox.html">Email</a></li>
+                <li class="active"><a href="extra.html">Extra</a></li>
+            </ul>
+        </li>
+        <li><a href="support.html"><span class="name">Support</span></a></li>
+        <li><a href="https://flatlogic.com/github"><span class="name">Github</span></a></li>
+        <li><a href="changelog.html"><span class="name">Change log</span></a></li>
+    </ul>
+</nav>
+<div class="wrap">
+    <div class="row-fluid">
+        <div class="span10">
+            <header class="page-header">
+                <h1>Sing Documentation 4.2.1</h1>
+            </header>
+        </div>
+    </div>
+    <div class="content container-fluid">
+        <div class="row-fluid">
+            <div class="span10">
+                <section class="widget">
+                    <h2>Navigation</h2>
+                    <hr>
+                    <ol style="margin-top: 0">
+                        <li><a href="#calendar">Calendar</a></li>
+                        <li><a href="#invoice">Invoice</a></li>
+                        <li><a href="#login">Login page</a></li>
+                        <li><a href="#error">404 page</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#search">Search page</a></li>
+                        <li><a href="#timeline">Timeline</a></li>
+                    </ol>
+                    <h2 id="calendar">Calendar</h2>
+                    <hr/>
+                    <p>FullCalendar is a jQuery plugin that provides a full-sized, drag & drop calendar. Read more about it
+                        on <a href="http://arshaw.com/fullcalendar/">FullCalendar website</a>. Files:</p>
+                    <pre><code>&lt;script src=&quot;vendor/fullcalendar/fullcalendar.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <h2 id="invoice">Invoice</h2>
+                    <hr>
+                    <p>Invoice page is a print-optimized document layout you can use for your invoices.</p>
+                    <h2 id="login">Login page</h2>
+                    <hr>
+                    <p>This template is great not just for login page, but for registration too, isn't it?</p>
+                    <p>Login page contains only markup, so you may want to read about validation or forms.</p>
+                    <h2 id="error">404 page</h2>
+                    <hr>
+                    <p>Replace error code with your own!</p>
+                    <p>404 page contains only markup, so you may want to read about
+                        widgets or forms.</p>
+                    <h2 id="gallery">Gallery</h2>
+                    <hr/>
+                    <p>Gallery uses Bootstrap's thumbnails, which are great for grids of photos or videos,
+                        image search results, retail products, portfolios, and much more.</p>
+                    <p><a href="http://getbootstrap.com/components/#thumbnails">Read more about it</a>.</p>
+                    <p>For this cool animated gallery sorting we use
+                        <strong>open source</strong> lib called <a href="http://vestride.github.io/Shuffle/">Shuffle JS</a>.</p>
+                    <h2 id="search">Search page</h2>
+                    <hr>
+                    <p>Search page contains only markup, so you may want to read about
+                    widgets orforms.</p>
+                    <h2 id="timeline">Timeline</h2>
+                    <hr>
+                    <p>Timeline page is inspired by facebook's one. Ready to use solution to display social events, todos,
+                    projects, etc. Basic timeline event looks like that:</p>
+                    <pre><code>&lt;ul class=&quot;timeline&quot;&gt;
+    &lt;li&gt;
+        &lt;time class=&quot;event-time&quot; datetime=&quot;2014-05-19 03:04&quot;&gt;
+            &lt;span class=&quot;date&quot;&gt;now&lt;/span&gt;
+        &lt;/time&gt;
+        &lt;span class=&quot;event-icon event-icon-primary&quot;&gt;
+            &lt;i class=&quot;glyphicon glyphicon-comment&quot;&gt;&lt;/i&gt;
+        &lt;/span&gt;
+        &lt;section class=&quot;event&quot;&gt;
+            &lt;h4 class=&quot;event-heading&quot;&gt;heading&lt;/h4&gt;
+            &lt;p&gt;text&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;ul class=&quot;post-links&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1 hour&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/footer&gt;
+        &lt;/section&gt;
+    &lt;/li&gt;
+    ...
+&lt;/ul&gt;</code></pre>
+    
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jquery and friends -->
+<script src="js/jquery.1.9.0.min.js"> </script>
+
+<script src="js/bootstrap-transition.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+
+</body>
+</html>

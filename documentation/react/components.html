@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sing Documentation</title>
+    <link href="../css/documentation.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+</head>
+<body class="background-two">
+<nav id="sidebar" class="sidebar">
+    <ul id="side-nav" class="side-nav">
+        <li><a href="../index.html"><span class="name">Overview</span></a></li>
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-html5-collapse"> <span class="name">Version: HTML5</span></a>
+            <ul id="version-html5-collapse" class="accordion-body collapse">
+                <li><a href="../html5/quickstart.html">Quick start</a></li>
+                <li><a href="../html5/structure.html">Structure</a></li>
+                <li><a href="../html5/components.html">Components</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group active">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-react-collapse"> <span class="name">Version: React</span></a>
+            <ul id="version-react-collapse" class="accordion-body collapse in">
+                <li><a href="./quickstart.html">Quick start</a></li>
+                <li><a href="./structure.html">Structure</a></li>
+                <li class="active"><a href="./components.html">Components</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-angular-collapse"> <span class="name">Version: Angular</span></a>
+            <ul id="version-angular-collapse" class="accordion-body collapse">
+                <li><a href="../angular/quickstart.html">Quick start</a></li>
+                <li><a href="../angular/structure.html">Structure</a></li>
+                <li><a href="../angular/components.html">Components</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-angularjs-collapse"> <span class="name">Version: AngularJS</span></a>
+            <ul id="version-angularjs-collapse" class="accordion-body collapse">
+                <li><a href="../angularjs/quickstart.html">Quick start</a></li>
+                <li><a href="../angularjs/structure.html">Structure</a></li>
+                <li><a href="../angularjs/components.html">Components</a></li>
+            </ul>
+        </li>
+        <!-- <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-rails-collapse"> <span class="name">Version: Rails</span></a>
+            <ul id="version-rails-collapse" class="accordion-body collapse">
+                <li><a href="rails_qs.html">Quick start</a></li>
+                <li><a href="rails_st.html">Structure</a></li>
+                <li><a href="rails_cp.html">Components</a></li>
+            </ul>
+        </li> -->
+        <li class="accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#pages-collapse"> <span class="name">Pages</span></a>
+            <ul id="pages-collapse" class="accordion-body collapse">
+                <li><a href="../dashboard.html">Dashboard</a></li>
+                <li><a href="../inbox.html">Email</a></li>
+                <li><a href="../extra.html">Extra</a></li>
+            </ul>
+        </li>
+        <li><a href="../support.html"><span class="name">Support</span></a></li>
+        <li><a href="https://flatlogic.com/github"><span class="name">Github</span></a></li>
+        <li><a href="../changelog.html"><span class="name">Change log</span></a></li>
+    </ul>
+</nav>
+<div class="wrap">
+    <div class="row-fluid">
+        <div class="span10">
+            <header class="page-header">
+                <h1>Sing Documentation 4.2.1</h1>
+            </header>
+        </div>
+    </div>
+    <div class="content container-fluid">
+        <div class="row-fluid">
+            <div class="span10">
+                <section class="widget">
+                  <h2>AngularJS: Components</h2>
+                  <hr>
+                  <ol>
+                    <li><a href="#charts">Charts</a></li>
+                    <li>
+                      <a href="#f_elements">Forms</a>
+                      <ul>
+                        <li><a href="#f_elements">Elements</a></li>
+                        <li><a href="#f_validation">Validation</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#ui_components">UI</a>
+                      <ul>
+                        <li><a href="#ui_components">Components</a></li>
+                        <li><a href="#ui_notifications">Notificaions</a></li>
+                        <li><a href="#ui_icons">Icons</a></li>
+                        <li><a href="#ui_buttons">Buttons</a></li>
+                        <li><a href="#ui_tabs">Tabs</a></li>
+                        <li><a href="#ui_accordion">Accordion</a></li>
+                        <li><a href="#ui_groups">List Groups</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#grid">Grid</a></li>
+                    <li>
+                      <a href="#maps_google">Maps</a>
+                      <ul>
+                        <li><a href="#maps_google">Google</a></li>
+                        <li><a href="#maps_vector">Vector</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#tables_static">Tables</a>
+                      <ul>
+                        <li><a href="#tables_static">Static</a></li>
+                        <li><a href="#tables_dynamic">Dynamic</a></li>
+                      </ul>
+                    </li>
+                  </ol>
+                  <h2 id="charts">Charts</h2>
+                    <hr>
+                    <h3>Flot Charts</h3>
+                    <p>Built with <a href="http://www.flotcharts.org/">Flot JS</a>. Required libs:</p>
+                    <pre><code>import 'imports-loader?jQuery=jquery,this=>window!flot';</code></pre>
+
+                    <h3>Interactive Sparklines</h3>
+                    <p>Built with <a href="http://omnipotent.net/jquery.sparkline/#s-about">jqeruy.sparkline</a>.</p>
+                    <pre><code>import 'imports-loader?jQuery=jquery,this=>window!jquery-sparkline';</code></pre>
+
+                    <h3>Rickshaw</h3>
+                    <p>Realtime chart is based on <a href="http://code.shutterstock.com/rickshaw/examples/extensions.html">Rickshaw
+                    realtime example</a>.</p>
+
+                    <h3>Sparkline Pie Charts</h3>
+                    <p>Same as interactive sparklines based on <a href="http://omnipotent.net/jquery.sparkline/#s-about">jqeruy.sparkline</a>.</p>
+                    <pre><code>import Rickshaw from 'rickshaw';</code></pre>
+
+                    <h3>D3 charts</h3>
+                    <p>These charts are based on amazing <a href="http://d3js.org/">D3.js</a> library. Here is what D3
+                        says about itself:</p>
+                    <blockquote>
+                        D3.js is a JavaScript library for manipulating documents based on data.
+                        D3 helps you bring data to life using HTML, SVG and CSS. D3’s emphasis on web standards
+                        gives you the full capabilities of modern browsers without tying yourself to a proprietary
+                        framework, combining powerful visualization components and a data-driven approach to DOM manipulation.
+                    </blockquote>
+                    <p>So it means that graphs are drawn with standard SVG and styled with CSS. You can customize all you like with techniques you already know.</p>
+                    <p>There are two libraries used in <strong>Sing App</strong> which work on top of D3.js:</p>
+                    <ul>
+                        <li><a href="http://nvd3.org/">nvd3</a> - which is focused on developing re-usable charts and chart components for d3.js without taking away the power that d3.js gives to developer, and</li>
+                        <li><a href="http://code.shutterstock.com/rickshaw/">Rickshaw</a> - a JavaScript toolkit for creating interactive time series graphs based on d3.js underneath. Rickshaw is used for displaying
+                            realtime data in Sing.</li>
+                    </ul>
+                    <pre><code>import d3 from 'd3';
+import nv from 'nvd3';</code></pre>
+
+                    <h3>Morris Charts</h3>
+                    <p>Built with <a href="http://morrisjs.github.io/morris.js/">Morris JS</a>.</p>
+                    <pre><code>import 'imports-loader?jQuery=jquery,this=>window!webpack-raphael/raphael';
+import 'imports-loader?jQuery=jquery,this=>window!govpredict-morris/morris';</code></pre>
+
+                    <h3>Easy Pie Charts</h3>
+                    <p>Built with <a href="https://github.com/rendro/easy-pie-chart">Easy Pie Chart</a>.</p>
+                    <pre><code>import 'imports-loader?jQuery=jquery,this=>window!easy-pie-chart/dist/jquery.easypiechart.js';</code></pre>
+
+                    <h3>Flot Bars</h3>
+                    <p>Same as Flot Charts built with <a href="http://www.flotcharts.org/">Flot</a>. A bit different dependencies:</p>
+                    <pre><code>import 'imports-loader?jQuery=jquery,this=>window!jquery.flot.animator/jquery.flot.animator';
+import 'imports-loader?jQuery=jquery,this=>window!flot';
+import 'imports-loader?jQuery=jquery,this=>window!flot/jquery.flot.time';</code></pre>
+                  <h2 id="f_elements">Form Elements</h2>
+                    <hr>
+                    <pre><code>import { Form } from 'reactstrap';</code></pre>
+                    <h3>Inputs</h3>
+                    <hr/>
+                    <p>Bootstrap styles input by default, so there is no need to add any classes to inputs. Just use them. Don't forget to include input type.</p>
+                    <p>Bootstrap has a great <a href="http://getbootstrap.com/css/#forms">documentation about forms</a>.</p>
+
+                    <h3>Input Sizing</h3>
+                    <hr/>
+                    <p>Any input can be sized by wrapping in <code>&lt;Col sm="*" xs="*"&gt;</code> component. For vertical sizing
+                        <code>size="lg"</code> and <code>size="sm"</code> props are available.</p>
+                    <h3>Textareas</h3>
+                    <hr/>
+                    <p>Auto-growing textarea uses <a href="http://react-components.buildo.io/#textareaautosize">Textarea Autosize</a>
+                        to increase area size dynamically. Imports:</p>
+                    <pre><code>import TextareaAutosize from 'react-autosize-textarea';</code></pre>
+                    <p>Wysiwyg editor is based on <a href="https://github.com/jpuri/react-draft-wysiwyg">React Draft Wysiwyg</a>. Imports:</p>
+                    <pre><code>import { Editor } from 'react-draft-wysiwyg';
+import { EditorState } from 'draft-js';</code></pre>
+                    <p>Markdown editor is built with <a href="https://github.com/andrerpena/react-mde">React Markdown Editor</a>. Imports:</p>
+                    <pre><code>import ReactMde, { ReactMdeCommands } from 'react-mde';</code></pre>
+                    <h3>Selects</h3>
+                    <hr/>
+                    <p>Two different type of selects avaiables in <strong>Sing</strong> template:</p>
+                    <ul>
+                        <li><a href="https://github.com/rkit/react-select2-wrapper">Select2</a> - is a really powerful tool used to convert default selects to interactive search-enabled widgets.</li>
+                        <li>Bootstrap Select - is Bootstrap based custom select, designed to behave like regular Bootstrap selects.
+                            This one can be colored as any button.</li>
+                    </ul>
+                    <p>Imports:</p>
+        <pre>import { UncontrolledButtonDropdown,
+          DropdownMenu,
+          DropdownItem,
+          DropdownToggle,
+        } from 'reactstrap';
+import Select2 from 'react-select2-wrapper';</pre>
+
+                    <p>Bootstrap Select code example:</p>
+                    <pre><code>&lt;UncontrolledButtonDropdown&gt;
+    &lt;DropdownToggle
+        caret color="secondary"
+        className="dropdown-toggle-split mr-xs"
+    >
+        {this.state.selected}
+    &lt;/DropdownToggle&gt;
+    &lt;DropdownMenu&gt;
+        &lt;DropdownItem onClick={this.changeSelect}&gt;
+           Option One
+        &lt;/DropdownItem&gt;
+        &lt;DropdownItem onClick={this.changeSelect}&gt;
+            Option Two
+        &lt;/DropdownItem&gt;
+        &lt;DropdownItem onClick={this.changeSelect}&gt;
+            Option Three
+        &lt;/DropdownItem&gt;
+    &lt;/DropdownMenu>
+&lt;/UncontrolledButtonDropdown&gt;</code></pre>
+                    <h3>Checkboxes and Radio</h3>
+                    <hr/>
+                    <p>To style default checkboxes and radio buttons <a href="https://github.com/okendoken/awesome-bootstrap-checkbox">
+                        Awesome Bootstrap Checkbox</a> library is used. This lib was written specially for Sing, so
+                        in case you find some bugs or want some features - let us know.</p>
+                    <h3>Button-like checkboxes</h3>
+                    <hr/>
+                    <p>Bootstrap has a great api to handle button states -
+                        <a href="https://reactstrap.github.io/components/buttons/">bootstrap button</a>, so using it to
+                        imitate checkbox or radio buttons.</p>
+
+                    <h3>iOS-like switches</h3>
+                    <hr/>
+                    <p>Usage:</p>
+                    <pre><code>&lt;FormGroup className="display-inline-block checkbox-ios ml"&gt;
+    &lt;Label for="checkbox-ios" className="switch"&gt;
+        &lt;Input type="checkbox" className="ios" id="checkbox-ios" /&gt;&lti /&gt;
+    &lt;/Label&gt;
+&lt;/FormGroup&gt;&lt/code&gt;&lt/pre&gt;</code></pre>
+
+                    <h3>Pickers</h3>
+                    <hr/>
+                    <p>Any field may have either <a href="https://github.com/YouCanBookMe/react-datetime">react-datetime</a>
+                        or <a href="http://react-component.github.io/color-picker/">rc-color-picker</a> attached. Imports:</p>
+                    <pre>import Datetime from 'react-datetime';
+import ColorPicker from 'rc-color-picker';</pre>
+                    <h3>Masked Inputs</h3>
+                    <hr/>
+                    <p>To make any input accept only formatted values there is a great plugin to use -
+                        <a href="https://github.com/insin/react-maskedinput">MaskedInput</a>. Imports:</p>
+                    <pre><code>import MaskedInput from 'react-maskedinput';</code></pre>
+                    
+                    <h3>Sliders</h3>
+                    <hr>
+                    <p>Sing sliders are styled version of <a href="https://github.com/brownieboy/react-bootstrap-slider">React Bootstrap Slider</a>.</p>
+                    <pre><code>import ReactBootstrapSlider from 'react-bootstrap-slider';</code></pre>
+                    <h3>Dropzone</h3>
+                    <hr>
+                    <p>Dead simple file upload plugin with image preview <a href="https://react-dropzone.js.org/">Dropzone</a>.</p>
+                    <pre><code>import Dropzone from 'react-dropzone';</code></pre>
+                    <h2 id="f_validation">Validation</h2>
+                    <hr>
+                    <p><strong>Sing App</strong> have a good validation component <code>&lt;InputValidation&gt;</code>. Use it!
+                    <pre>import InputValidation from 'src/components/InputValidation/InputValidation';</pre>
+                    <pre>&lt;InputValidation
+    type="text"
+    id="email"
+    name="email"
+    trigger="change"
+    required
+    validations={{ isEmail: true }}
+    validationError={{ isEmail: 'This value should be a valid email.' }}
+/&gt;</pre>
+                    <h2 id="ui_components">Components</h2>
+                    <hr>
+                    <p>
+                        This page contain Sing-y styled versions of Bootstrap (<a href="https://reactstrap.github.io/">Reactstrap</a>):
+                        <a href="https://reactstrap.github.io/components/alerts/">Alerts</a>,
+                        <a href="https://reactstrap.github.io/components/badge/">Labels</a>,
+                        <a href="https://reactstrap.github.io/components/tooltips/">Tooltips</a>,
+                        <a href="https://reactstrap.github.io/components/popovers/">Popovers</a>,
+                        <a href="https://reactstrap.github.io/components/modals/">Modals</a>
+                        and <a href="https://reactstrap.github.io/components/progress/">Progress Bars</a>.
+                        All styles are in bootstrap-override.scss.
+                    </p>
+                    <p>For progress bars there is a small <strong>Sing</strong> extension which allows you to change progress bars sizes by adding className:
+                    <code>className="progress-xs"</code>, <code>className="progress-sm"</code>.</p>
+                    <h2 id="ui_notifications">Notifications</h2>
+                    <hr>
+                    <p>Sing App uses <strong>HubSpot's Messenger</strong> library. It's a client-side growl-like notifications with actions and auto-retry.</p>
+                    <p>Read more at <a href="http://github.hubspot.com/messenger/">Messenger website</a>.</p>
+                    <h2 id="ui_icons">Font Awesome Icons</h2>
+                    <hr/>
+                    <p>Font Awesome is iconic font originally designed for Bootstrap (Font Awesome works great with all
+                        frameworks). It contains 439 icons in pictographic font form.</p>
+                    <p>Read more at <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome website</a>.</p>
+                    <h2>Glyphicons Icons</h2>
+                    <hr/>
+                    <p>200  icons in pictographic font form provided by <a href="http://glyphicons.com">Glyphicons</a>.</p>
+                    <h2 id="ui_buttons">Buttons</h2>
+                    <p>To create button you can style any html element with <code>.btn</code> class or use <code>&lt;Button&gt;</code> component. <strong>Sing App</strong>
+                        replaces default bootstrap colors with theme specific and adds two more: <code>color="gray"</code> and
+                        <code>color="inverse"</code>.</p>
+                    <p>You can read more at <a href="https://reactstrap.github.io/components/buttons/">Reactstrap Buttons page</a>.</p>
+                    <h2 id="ui_tabs">Tabs</h2>
+                    <hr>
+                    <p>Tabs component may be placed both inside of <code>.widget</code> element or directly into main
+                        <code>.content</code>.</p>
+                    <p>Usage example:</p>
+                    <pre><code>&lt;Nav tabs&gt;
+    &lt;NavItem&gt;
+        &lt;NavLink
+            className={classnames({ active: this.state.activeTab === 1 })}
+            onClick={() => { this.toggleTabs(1); }}
+        >
+            First title
+        &lt;/NavLink&gt;
+    &lt;/NavItem&gt;
+    &lt;NavItem&gt;
+        &lt;NavLink
+            className={classnames({ active: this.state.activeTab === 2 })}
+            onClick={() => { this.toggleTabs(2); }}
+        >
+          Second Title
+        &lt;/NavLink&gt;
+    &lt;/NavItem&gt;
+&lt;/Nav&gt;
+
+&lt;TabContent activeTab={this.state.activeTab}&gt;
+    &lt;TabPane tabId={1}&gt;
+        &lt;p>First tab content&lt;/p&gt;
+    &lt;/TabPane&gt;
+    &lt;TabPane tabId={2}&gt;
+        &lt;p>Second tab content&lt;/p&gt;
+    &lt;/TabPane&gt;
+&lt;/TabContent&gt;
+</code></pre>
+                    <p>For more info check <a href="https://reactstrap.github.io/components/tabs/">Reactstrap Tabs</a>.</p>
+                    <h2 id="ui_accordion">Accordion</h2>
+                    <hr>
+                    <p>Same as Tabs Accordion may be placed both as a widget inside <code>.content</code> or inside of
+                    <code>.widget</code>. <strong>Sing's</strong> accordion is a styled version of
+                    <a href="https://reactstrap.github.io/components/collapse/">Bootstrap Collapse component</a>.</p>
+                    <h2>Grouped Lists</h2>
+                    <hr>
+                    <p><strong>Sing App</strong> grouped lists is a styled version of
+                        jQuery UI <a href="https://github.com/clauderic/react-sortable-hoc">React Sortable HOC</a>.</p>
+                    <h2 id="ui_groups">List Groups</h2>
+                    <hr>
+                    <p>This nestable draggable lists are built with <a href="https://github.com/fritz-c/react-sortable-tree">SortableTree </a>.</p>
+                    <h2 id="grid">Grid System</h2>
+                    <p><strong>Sing App</strong> inherits 12-column grid system from
+                        <a href="http://getbootstrap.com/css/#grid">Bootstrap's great one</a> with <a href="https://reactstrap.github.io/">Reactstrap</a>.</p>
+                    <h2>Widget Controls</h2>
+                    <p>For one of our previous works we have developed a custom component called <strong>Widget</strong> based on <a href="https://github.com/flatlogic/widgster">Widgster</a> which provides an easy way to handle basic
+                        widget functions like collapsing, closing, refreshing & fullsreening.</p>
+                    <pre>import Widget from "src/components/widget/widget";</pre>
+                    <p>Usege example:</p>
+                    <pre>&lt;Widget
+  title={&lt;h6&gt; Alert &lt;span className="fw-semi-bold"&gt;Messages&lt;/span&gt;&lt;/h6&gt;}
+  close settings refresh
+  options={{}}
+&gt;
+    content goes here
+&lt;/Widget&gt;
+</pre>
+                    <h3>Options</h3>
+                    <ul style="list-style: disc; padding-left: 40px; margin-bottom: 10px">
+                        <li><strong>collapsed</strong> - if true collapses widget after page load;</li>
+                        <li><strong>fullscreened</strong> - if true fullscreens widget after page load;</li>
+                        <li><strong>bodySelector</strong> - widget body selector. Used for loading and collapsing. Default is <code>.body</code>;</li>
+                        <li><strong>load</strong> - an url to fetch widget body from. Default is <code>undefined</code>;</li>
+                        <li><strong>showLoader</strong> - whether to show a loader when ajax refresh performed. Default is <code>true</code>;</li>
+                        <li><strong>autoload</strong> - whether to automatically perform ajax refresh after page load. May be set to an integer value. If set, for example, to 2000 will refresh the widget every 2 seconds. Default is <code>false</code>;</li>
+                        <li><strong>closePrompt(callback)</strong> - a function to be called when closing. Closing is
+                            only performed when <code>callback</code> is called.</li>
+                    </ul>
+                    <h3>Actions</h3>
+                    <ul style="list-style: disc; padding-left: 40px; margin-bottom: 10px">
+                        <li><strong>close</strong> - closes the widget;</li>
+                        <li><strong>collapse</strong> - collapses (minimizes) the widget. An element holding this data
+                            attribute will be hidden when widget gets expanded;</li>
+                        <li><strong>expand</strong> - expands the widget. An element holding this data
+                            attribute will be hidden when widget gets collapsed;</li>
+                        <li><strong>fullscreen</strong> - fullscreens the widget. An element holding this data
+                            attribute will be hidden when widget gets restored;</li>
+                        <li><strong>restore</strong> - restores the widget back to its position. An element holding this data
+                            attribute will be hidden when widget gets fullscreened;</li>
+                        <li><strong>load</strong> - reloads widget content from the url provided with <code>data-widget-load</code> attribute.</li>
+                    </ul>
+                    <h2 id="maps_google">Google maps</h2>
+                    <hr/>
+                    <p>To embed Google Maps into <strong>Sing App</strong> great package is used -
+                        <a href="https://tomchentw.github.io/react-google-maps/">React Google Maps</a>. Imports:</p>
+                    <pre>import { withGoogleMap,
+         withScriptjs,
+         GoogleMap,
+         Marker,
+       } from 'react-google-maps';</pre>      
+                    <h2 id="maps_vector">Vector maps</h2>
+                    <hr/>
+                    <p>Sometimes you need to use just simplified version of map. <a href="https://github.com/bjornd/jvectormap">Jvectormap</a> does
+                        a great job in such cases.</p>
+                    <pre><code>import 'imports-loader?jQuery=jquery,this=>window!jvectormap/jquery-jvectormap.min.js';</code></pre>
+                    <h2 id="tables_static">Static Tables</h2>
+                    <hr/>
+                    <p><strong>Sing App</strong> tables are based on
+                        <a href="https://reactstrap.github.io/components/tables/">Bootstrap tables</a> with additional
+                        styling.</p>
+                    <p>Tables aviable in different sizes: <code>size="sm"</code> and <code>size="lg"</code>.</p>
+                    <p>Also, don't forget about <code>responsive</code> prop which adds horizontal scrollbar
+                    to tables for small screens.</p>
+                    <p>Usage example:</p>
+                    <pre><code>&lt;Table dark&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;First Name&lt;/th&gt;
+            &lt;th&gt;Last Name&lt;/th&gt;
+            &lt;th&gt;Username&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;1&lt;/th&gt;
+            &lt;td&gt;Mark&lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;@mdo&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;2&lt;/th&gt;
+            &lt;td&gt;Jacob&lt;/td&gt;
+            &lt;td&gt;Thornton&lt;/td&gt;
+            &lt;td&gt;@fat&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;3&lt;/th&gt;
+            &lt;td&gt;Larry&lt;/td&gt;
+            &lt;td&gt;the Bird&lt;/td&gt;
+            &lt;td&gt;@twitter&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/Table&gt;</code></pre>
+                    <h2 id="tables_dynamic">Dynamic Tables</h2>
+                    <hr/>
+                    <p>Dynamic tables built with fully custamizable <a href="">react-bootstrap-table</a> and lightweight, fast and powerfull <a href="">react-table</a>.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jquery and friends -->
+<script src="../js/jquery.1.9.0.min.js"> </script>
+
+<script src="../js/bootstrap-transition.js"></script>
+<script src="../js/bootstrap-collapse.js"></script>
+
+</body>
+</html>

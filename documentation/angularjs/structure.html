@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sing Documentation</title>
+    <link href="../css/documentation.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+</head>
+<body class="background-two">
+    <nav id="sidebar" class="sidebar">
+        <ul id="side-nav" class="side-nav">
+            <li><a href="index.html"><span class="name">Overview</span></a></li>
+            <li class="accordion-group">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-html5-collapse"> <span class="name">Version: HTML5</span></a>
+                <ul id="version-html5-collapse" class="accordion-body collapse">
+                    <li><a href="../html5/quickstart.html">Quick start</a></li>
+                    <li><a href="../html5/structure.html">Structure</a></li>
+                    <li><a href="../html5/components.html">Components</a></li>
+                </ul>
+            </li>
+            <li class="accordion-group">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-react-collapse"> <span class="name">Version: React</span></a>
+                <ul id="version-react-collapse" class="accordion-body collapse">
+                    <li><a href="../react/quickstart.html">Quick start</a></li>
+                    <li><a href="../react/structure.html">Structure</a></li>
+                    <li><a href="../react/components.html">Components</a></li>
+                </ul>
+            </li>
+            <li class="accordion-group">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-angular-collapse"> <span class="name">Version: Angular</span></a>
+                <ul id="version-angular-collapse" class="accordion-body collapse">
+                    <li><a href="../angular/quickstart.html">Quick start</a></li>
+                    <li><a href="../angular/structure.html">Structure</a></li>
+                    <li><a href="../angular/components.html">Components</a></li>
+                </ul>
+            </li>
+            <li class="accordion-group active">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-angularjs-collapse"> <span class="name">Version: AngularJS</span></a>
+                <ul id="version-angularjs-collapse" class="accordion-body collapse in">
+                    <li><a href="./quickstart.html">Quick start</a></li>
+                    <li class="active"><a href="./structure.html">Structure</a></li>
+                    <li><a href="./components.html">Components</a></li>
+                </ul>
+            </li>
+            <!-- <li class="accordion-group">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#version-rails-collapse"> <span class="name">Version: Rails</span></a>
+                <ul id="version-rails-collapse" class="accordion-body collapse">
+                    <li><a href="rails_qs.html">Quick start</a></li>
+                    <li><a href="rails_st.html">Structure</a></li>
+                    <li><a href="rails_cp.html">Components</a></li>
+                </ul>
+            </li> -->
+            <li class="accordion-group">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#pages-collapse"> <span class="name">Pages</span></a>
+                <ul id="pages-collapse" class="accordion-body collapse">
+                    <li><a href="../dashboard.html">Dashboard</a></li>
+                    <li><a href="../inbox.html">Email</a></li>
+                    <li><a href="../extra.html">Extra</a></li>
+                </ul>
+            </li>
+            <li><a href="../support.html"><span class="name">Support</span></a></li>
+            <li><a href="https://flatlogic.com/github"><span class="name">Github</span></a></li>
+            <li><a href="../changelog.html"><span class="name">Change log</span></a></li>
+        </ul>
+    </nav>
+<div class="wrap">
+    <div class="row-fluid">
+        <div class="span10">
+            <header class="page-header">
+                <h1>Sing Documentation 4.2.1</h1>
+            </header>
+        </div>
+    </div>
+    <div class="content container-fluid">
+        <div class="row-fluid">
+            <div class="span10">
+                <section class="widget">
+                  <h2>AngularJS: Structure</h2>
+                  <hr>
+                  <p>Since 2.0.0 update Angular version has been heavily rewritten using latest industry best-practices
+                      of building and organizing Angular web applications. All of the application logic is separated into
+                      isolated modules, which allows to easily maintain and scale the application
+                  </p>
+                  <p>Sing App Angular version goes with the following folders:</p>
+                  <ul>
+                      <li><strong>*root*</strong> - mostly project meta- and configuration files like node and bower package definitions;</li>
+                      <li><strong>gulp</strong> - gulp tasks for automation;</li>
+                      <li><strong>src</strong> - (sources) main application folder. All of the application code is put in here;</li>
+                      <li><strong>src/index.html</strong> - main angular layout file;</li>
+                      <li><strong>src/app/index.js</strong> - main js file which simply loads application modules;</li>
+                      <li><strong>src/app/index.scss</strong> - application styles;</li>
+                      <li><strong>src/app/vendor.scss</strong> - 3rd party styles and overrides;</li>
+                      <li><strong>src/app/modules</strong> - application modules. Every module usually consists of <code>module-name.js</code> file with
+                          module logic, <code>module-name.module.js</code> file with module dependencies/initialization and one or more <code>module.html</code> files
+                          for module templating. The structure is based on <a href="https://github.com/flatlogic/angular-dashboard-seed">angular-dashboard-seed</a>;</li>
+                      <li><strong>src/app/theme</strong> - application styles (scs) divided into several parts.</li>
+                      <li><strong>dist</strong> - build version of Sing Angular with minifiend html/css/js files. Ready for production;</li>
+                      <li><strong>bower_components</strong> - various JS libraries used in Sing App. As of we are using Bower here it's strongly recommended to
+                          add/update/remove libraries only via Bower;</li>
+                      <li><strong>node_modules</strong> - node packages used for project building and automation;</li>
+                      <li><strong>views</strong> - angular js page views. Also contains app.html which
+                          is a main sub-layout for dashboard. Two pages <a href="extra.html#login">login.html</a> and <a href="extra.html#error">error.html</a>
+                          are displayed without sub-layout but directly in index.html;</li>
+                  </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jquery and friends -->
+<script src="../js/jquery.1.9.0.min.js"> </script>
+
+<script src="../js/bootstrap-transition.js"></script>
+<script src="../js/bootstrap-collapse.js"></script>
+
+</body>
+</html>
