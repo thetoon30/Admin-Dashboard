@@ -23,3 +23,11 @@ AngularJs
 - gulp serve
 
 - gulp build
+
+Angular 5
+
+- npm install
+
+- npm start
+
+- npm run build:prod
